@@ -4,8 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4bb6b2d94e7a219bbcf500b37414b06c"></script>
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=8c753c2a5e71ba16bcc4c3374a19a10f"></script>
     <script>
+
+      function initMap() {
+        var container = document.getElementById('map');
+        var options = {
+          center: new kakao.maps.LatLng(33.4420, 126.571466),
+          level: 3
+        };
+
+        var map = new kakao.maps.Map(container, options);
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        initMap();
+      });
+
       document.addEventListener('DOMContentLoaded', function() {
         const scrollTopBtn = document.querySelector('.scrollTopBtn');
         const btmBar = document.querySelector('.BtmBar');
@@ -433,15 +448,15 @@
   </head>
   <body>
     <div class="top">
-      <div class="TopBar">
-        <img src="Logo-fin.png" alt="Logo">
+      <header class="TopBar">
+        <img src="assets/Logo-fin.png" alt="Logo">
         <div class="TopBarSelect">
           <p>Home</p>
           <p>About</p>
           <p>Support</p>
-          <img src="Download_btn.png" alt="Download_btn">
+          <img src="assets/Download_btn.png" alt="Download_btn">
         </div>
-      </div>
+      </header>
       <div class="TopContent">
         <div class="TopDummy">
           <div>
@@ -455,14 +470,14 @@
             <p>Lorem Ipsum has been the industry's standard dummy text</p>
             <p>ever since the 1500s, when an unknown</p>
           </div>
-          <img src="Download_btn.png" alt="Download_btn">
+          <img src="assets/Download_btn.png" alt="Download_btn">
         </div>
-        <img src="cat_1.png" alt="">
+        <img src="assets/cat_1.png" alt="">
       </div>
     </div>
     <div class="mid">
       <div class="midContent1">
-        <img src="cat_2.png" alt="">
+        <img src="assets/cat_2.png" alt="">
         <div>
           <div class="MidDummy">
             <p>Lorem Ipsum is simply</p>
@@ -484,18 +499,18 @@
           <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
         </div>
         <div class="midContentImage">
-          <img src="mid_cat_1.png" alt="">
-          <img src="mid_cat_2.png" alt="">
-          <img src="mid_cat_3.png" alt="">
+          <img src="assets/mid_cat_1.png" alt="">
+          <img src="assets/mid_cat_2.png" alt="">
+          <img src="assets/mid_cat_3.png" alt="">
         </div>
         <div class="midContentImage">
-          <img src="mid_cat_4.png" alt="">
-          <img src="mid_cat_5.png" alt="">
-          <img src="mid_cat_6.png" alt="">
+          <img src="assets/mid_cat_4.png" alt="">
+          <img src="assets/mid_cat_5.png" alt="">
+          <img src="assets/mid_cat_6.png" alt="">
         </div>
         <div class="midContentBtm">
           <p>Continue exploring HODU</p>
-          <img src="show_more_btn.png" alt="" >
+          <img src="assets/show_more_btn.png" alt="" >
         </div>
         <div class="horizontalLine"></div>
       </div>
@@ -506,7 +521,7 @@
         <div class="midContent3DummySmall">
           <p>330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
         </div>
-        <img src="map_img.png" alt="">
+        <div id="map" style="width:100%;height:520px;"></div>
       </div>
     </div>
     <div class="Bottom">
@@ -522,28 +537,28 @@
         </div>
         <div class="AddressBox">
           <div class="UserInput">
-            <img src="mail.png" alt="" class="mailIcon">
+            <img src="assets/mail.png" alt="" class="mailIcon">
             <input type="email" id="emailInput" placeholder="Enter your e-mail address">
           </div>
           <button class="SubscribeButton" onclick="validateEmail()">
-            <img src="Subscribe_btn.png" alt="Subscribe">
+            <img src="assets/Subscribe_btn.png" alt="Subscribe">
           </button>
         </div>
       </div>
     </div>
     <div class="CatBg">
-      <img src="cat_bg.png" alt="">
+      <img src="assets/cat_bg.png" alt="">
     </div>
-    <img src="scroll-top-btn.png" alt="" class="scrollTopBtn">
-    <div class="BtmBar">
-      <img src="Logo-fin-2.png" alt="">
-      <img src="sns_icon.png" alt="">
-    </div>
+    <img src="assets/scroll-top-btn.png" alt="" class="scrollTopBtn">
+    <footer class="BtmBar">
+      <img src="assets/Logo-fin-2.png" alt="">
+      <img src="assets/sns_icon.png" alt="">
+    </footer>
     <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-body">
-          <img src="modal.png" alt="Modal Image">
-          <img src="modal_cat.png" alt="" class="overlay-image">
+          <img src="assets/modal.png" alt="Modal Image">
+          <img src="assets/modal_cat.png" alt="" class="overlay-image">
           <div class="thk">
             <p>Thank you!</p>
           </div>
@@ -551,7 +566,7 @@
             <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
           </div>
           <button class="OkBtn" onclick="closeModal()">
-            <img src="ok-btn.png" alt="" id="okBtn">
+            <img src="assets/ok-btn.png" alt="" id="okBtn">
           </button>
         </div>
       </div>
